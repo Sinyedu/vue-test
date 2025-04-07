@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Dice game",
+    "description": "A simple dice game where you can roll a die and get a random number. built on vanilla JS",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "link": "https://github.com/Sinyedu/Dice-Game"
+  },
+  {
+    "id": 2,
+    "title": "Fantasy Festival",
+    "description": "A Website for a fantasy festival. built on Vue, our 2nd semester project",
+    "technologies": ["Vue.js", "HTML", "CSS"],
+    "link": "https://github.com/Sinyedu/Fantasy-Festival"
+  },
+  {
+    "id": 3,
+    "title": "Personal Portfolio",
+    "description": "2nd Semester project, a personal portfolio website. built on Vue",
+    "technologies": ["React", "HTML", "CSS"],
+    "link": "https://github.com/Sinyedu/SN-Portfolio"
+  }
+]
