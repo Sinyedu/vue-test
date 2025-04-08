@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-start bg-gray-100">
+  <div class="flex flex-col items-center justify-start bg-zinc-800">
     <PersonalWelcomeCard :name="'Simon Erik Nyblom'" :image="'/Simon.jpg'" />
 
     <TechStackCard />
