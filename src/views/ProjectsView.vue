@@ -1,16 +1,27 @@
 <template>
-  <div>
-    <h1 class="spurgt">My Projects</h1>
+  <div class="p-6">
+    <h1 class="text-2xl font-bold mb-4">My Projects</h1>
     <ul>
-      <li v-for="project in projects" :key="project.id">
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-        <p><strong>Technologies:</strong> {{ project.technologies.join(', ') }}</p>
-        <a :href="project.link" target="_blank" rel="noopener noreferrer">View Project</a>
+      <li
+        v-for="project in projects"
+        :key="project.id"
+        class="mb-4 border border-gray-100 p-4 rounded-lg shadow-sm"
+      >
+        <h2 class="text-xl font-semibold mb-2">{{ project.title }}</h2>
+        <p class="mb-2">{{ project.description }}</p>
+        <p class="mb-2"><strong>Technologies:</strong> {{ project.technologies.join(', ') }}</p>
+        <a
+          :href="project.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-500 hover:underline"
+        >
+          View Project
+        </a>
       </li>
     </ul>
-    <p v-if="loading">Loading projects...</p>
-    <p v-if="error">{{ error }}</p>
+    <p v-if="loading" class="text-gray-500">Loading projects...</p>
+    <p v-if="error" class="text-red-500">{{ error }}</p>
   </div>
 </template>
 
@@ -37,39 +48,4 @@ onMounted(async () => {
 })
 </script>
 
-<style lang="scss" scoped>
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin: 1rem 0;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem;
-}
-
-p {
-  margin: 0.5rem 0;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-</style>
+<style scoped></style>

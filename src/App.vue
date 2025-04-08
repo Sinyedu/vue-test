@@ -1,12 +1,37 @@
 <template>
   <section class="home">
     <NavbarView />
-    <router-view />
+    <transition name="fade" @before-enter="beforeEnter" @enter="enter" @leave="leave">
+      <router-view />
+    </transition>
   </section>
 </template>
 
 <script setup>
 import NavbarView from '@/components/layout/NavbarView.vue'
+</script>
+
+<script>
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Home',
+  methods: {
+    beforeEnter(el) {
+      el.style.opacity = 0
+    },
+    enter(el, done) {
+      el.offsetHeight
+      el.style.transition = 'opacity 1s ease'
+      el.style.opacity = 1
+      done()
+    },
+    leave(el, done) {
+      el.style.transition = 'opacity 1s ease'
+      el.style.opacity = 0
+      done()
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -38,5 +63,15 @@ button {
 
 button:hover {
   background-color: #369870;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About</router-link></li>
-      <li><router-link to="/projects">Projects</router-link></li>
+  <nav class="bg-gray-800 p-4 fixed top-0 left-0 w-full z-50">
+    <ul class="flex justify-end space-x-4">
+      <li><router-link to="/" class="text-white hover:underline">Home</router-link></li>
+      <li><router-link to="/about" class="text-white hover:underline">About</router-link></li>
+      <li><router-link to="/projects" class="text-white hover:underline">Projects</router-link></li>
     </ul>
   </nav>
 </template>
@@ -15,29 +15,7 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-  background-color: #333;
-  padding: 1rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
+nav {
+  z-index: 50;
 }
 </style>
